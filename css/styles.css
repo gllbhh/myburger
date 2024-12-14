@@ -12,6 +12,7 @@ body {
 .container {
 	height: 100vh;
 	width: 100%;
+	overflow: visible; /* Allows the sidebar to appear outside its parent */
 }
 
 /* Sidebar Navigation */
@@ -26,6 +27,15 @@ body {
 	padding: 20px;
 	box-sizing: border-box; /* Includes padding in width/height calculations */
 	overflow-y: auto; /* Enables scrolling within the sidebar if its content overflows */
+	transform: translateX(-220px);
+	transition: all 0.6s ease-in-out;
+}
+
+.sidebar:hover {
+	transform: translateX(0px); /* Moves the sidebar into view on hover */
+}
+.sidebar:hover ~ main {
+	margin-left: 250px; /* Push main content to the right */
 }
 
 .sidebar h2 {
@@ -63,9 +73,11 @@ body {
 /* Main Content Area */
 main {
 	width: 100%; /* Take the remaining width of the page */
+	margin-left: 30px; /* Leaves space for the sidebar (sidebar width + padding) */
+	transition: all 0.6s ease-in-out;
 }
+
 .content {
-	margin-left: 250px; /* Leaves space for the sidebar (sidebar width + padding) */
 	flex: 1;
 	padding: 20px;
 	background-color: #fff;
@@ -147,7 +159,6 @@ main {
 
 /* Page Header Styles */
 .page-header {
-	margin-left: 250px; /* Leaves space for the sidebar (sidebar width + padding) */
 	display: flex;
 	align-items: center;
 	gap: 1rem; /* Space between logo and title */
