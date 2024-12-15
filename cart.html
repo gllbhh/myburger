@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Brgb lab - Cart</title>
 		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="icon" type="image/png" href="img/logo32.jpeg" />
 	</head>
 	<body>
 		<div class="container">
@@ -12,42 +13,93 @@
 			<nav class="sidebar">
 				<h2>Menu</h2>
 				<ul class="nav-links">
-					<li><a href="index.html" class="nav-link">Burgers</a></li>
-					<li><a href="sides.html" class="nav-link">Sides</a></li>
-					<li><a href="dips.html" class="nav-link">Dips</a></li>
-					<li><a href="hot-drinks.html" class="nav-link">Hot Drinks</a></li>
-					<li><a href="cold-drinks.html" class="nav-link">Cold Drinks</a></li>
-					<li><a href="cart.html" class="nav-link cart-link">Cart</a></li>
+					<div class="top-links">
+						<li><a href="index.html" class="nav-link">Burgers</a></li>
+						<li><a href="sides.html" class="nav-link">Sides</a></li>
+						<li><a href="dips.html" class="nav-link">Dips</a></li>
+						<li><a href="hot-drinks.html" class="nav-link">Hot Drinks</a></li>
+						<li><a href="cold-drinks.html" class="nav-link">Cold Drinks</a></li>
+						<li>
+							<a href="desserts.html" class="nav-link cart-link">Desserts</a>
+						</li>
+					</div>
+					<div class="bottom-link">
+						<li><a href="cart.html" class="nav-link cart-link">Cart</a></li>
+					</div>
 				</ul>
 			</nav>
 
 			<!-- Main Content -->
-			<main class="content">
-				<h1>Cart</h1>
-				<table>
-					<thead>
-						<tr>
-							<th>Item</th>
-							<th>Quantity</th>
-							<th>Price</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Classic Burger</td>
-							<td>1</td>
-							<td>$12.99</td>
-						</tr>
-					</tbody>
-				</table>
-				<p>Total: $12.99</p>
+			<main>
+				<!-- Header -->
+				<header class="page-header">
+					<img src="img/logo.webp" alt="Restaurant Logo" class="logo" />
+					<h1>BRGR Lab</h1>
+				</header>
+				<div class="content">
+					<h1>Cart</h1>
+					<table class="cart">
+						<thead>
+							<tr>
+								<th>Item</th>
+								<th>Quantity</th>
+								<th>Price</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="cart-item-name">Classic Burger</td>
+								<td class="cart-item-qty">1</td>
+								<td class="cart-item-price">$12.99</td>
+								<td class="cart-button-td">
+									<button>-</button><button>+</button>
+								</td>
+							</tr>
+							<tr>
+								<td class="cart-item-name">Sweet Potato</td>
+								<td class="cart-item-qty">1</td>
+								<td class="cart-item-price">$3.50</td>
+								<td class="cart-button-td">
+									<button>-</button><button>+</button>
+								</td>
+							</tr>
+							<tr>
+								<td class="cart-item-name">Sweet and Sour Dip</td>
+								<td class="cart-item-qty">1</td>
+								<td class="cart-item-price">$1.50</td>
+								<td class="cart-button-td">
+									<button>-</button><button>+</button>
+								</td>
+							</tr>
+							<tr>
+								<td class="cart-item-name">Cappuccino</td>
+								<td class="cart-item-qty">1</td>
+								<td class="cart-item-price">$5.00</td>
+								<td class="cart-button-td">
+									<button>-</button><button>+</button>
+								</td>
+							</tr>
+							<tr>
+								<td class="cart-item-name">Curros</td>
+								<td class="cart-item-qty">1</td>
+								<td class="cart-item-price">$4.50</td>
+								<td class="cart-button-td">
+									<button>-</button><button>+</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<p><b>Total:</b> $27.49</p>
 
-				<label for="restaurant">Select Restaurant:</label>
-				<select id="restaurant">
-					<option value="restaurant1">Restaurant 1</option>
-					<option value="restaurant2">Restaurant 2</option>
-					<option value="restaurant3">Restaurant 3</option>
-				</select>
+					<label for="restaurant">Select Restaurant:</label>
+					<select id="restaurant">
+						<option value="restaurant1">BRGR Lab Harlem</option>
+						<option value="restaurant2">BRGR Lab Lower East Side</option>
+						<option value="restaurant3">BRGR Lab Financial District</option>
+						<option value="restaurant3">BRGR Lab Chelsea</option>
+					</select>
+					<button class="submit-order">Submit Order</button>
+				</div>
 			</main>
 		</div>
 	</body>

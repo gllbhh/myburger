@@ -12,8 +12,7 @@ body {
 .container {
 	height: 100vh;
 	width: 100%;
-	overflow: visible; /* Allows the sidebar to appear outside its parent */
-}
+	
 
 /* Sidebar Navigation */
 .sidebar {
@@ -46,6 +45,17 @@ body {
 .nav-links {
 	list-style: none;
 	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 700px;
+}
+.top-links {
+	display: flex;
+	flex-direction: column; /* Stack the top group vertically */
+}
+.bottom-link {
+	margin-top: auto; /* Push this group to the bottom */
 }
 
 .nav-links li {
@@ -72,7 +82,6 @@ body {
 
 /* Main Content Area */
 main {
-	width: 100%; /* Take the remaining width of the page */
 	margin-left: 30px; /* Leaves space for the sidebar (sidebar width + padding) */
 	transition: all 0.6s ease-in-out;
 }
@@ -98,6 +107,8 @@ main {
 	padding: 1rem;
 	border-radius: 8px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	max-width: 1000px;
+	min-width: 600px;
 }
 
 .menu-item img {
@@ -146,6 +157,23 @@ main {
 	cursor: pointer;
 	font-size: 0.9rem;
 }
+.size-button-div{
+    display: flex;
+    justify-content: space-between;
+    min-height: 20px;
+    margin-bottom: 5px;
+    min-width: 115px;
+    max-width: 115px;
+}
+.size-button{
+    width: 20px;
+    height: 20px;
+    margin-left: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+}
 
 .menu-item button:hover {
 	background-color: #e65b50;
@@ -182,4 +210,51 @@ main {
 	font-size: 2rem;
 	margin: 0;
 	color: white;
+}
+
+.cart {
+	min-width: 800px;
+	max-width: 1000px;
+}
+
+.cart th {
+	text-align: left;
+}
+
+.cart-item-name {
+	min-width: 300px;
+}
+.cart-item-qty {
+	min-width: 120px;
+}
+.cart-item-price {
+	min-width: 90px;
+	width: 120px;
+}
+.cart-button-td {
+	display: flex;
+}
+
+.cart button {
+	display: flex; /* Enable Flexbox */
+	justify-content: center; /* Horizontally center */
+	align-items: center; /* Vertically center */
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	margin-left: 3px;
+	cursor: pointer;
+}
+
+.submit-order {
+	background-color: #ff6f61;
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 0.9rem;
+}
+.submit-order:hover {
+	background-color: #e65b50;
 }
